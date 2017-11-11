@@ -1,0 +1,41 @@
+/* ==========================================================================
+                BREADCRUMBS STYLES
+   ========================================================================== */
+.breadcrumbs-list{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 0;
+    line-height: 0;
+    .bc-item{
+        position: relative;
+        display: inline-block;
+        @include fontStyle(11,24,0);
+        @include arial;
+        color: #c9bfb5;
+        margin-right: 20px;
+        &:before{
+            content: '—';
+            position: absolute;
+            display: block;
+            right: -15px;
+            top: 0;
+            @include fontStyle(11,24,0);
+            @include arial;
+            color: #c9bfb5;
+        }
+        &:last-child{
+            margin-right: 0;
+            &:before{
+                content: none;
+            }
+        }
+        a{
+            color: #c9bfb5;
+            text-decoration: none;
+            transition: color .3s 0s;
+            &:hover{
+                color: #b48b85;
+            }
+        }
+    }
+}

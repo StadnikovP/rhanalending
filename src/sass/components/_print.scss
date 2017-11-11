@@ -1,0 +1,930 @@
+/* ==========================================================================
+                serial STYLES
+   ========================================================================== */
+
+.main-trailer {
+    .trailer-video {
+        height: auto;
+    }
+    .trailer-title{
+        a{
+            display: inline-block;
+        }
+    }
+}
+
+.main-content-video{
+    overflow: hidden;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding-left: 20px;
+}
+
+
+.player-wrapper{
+    position: relative;
+    height: 340px;
+
+    .prev-video, .next-video{
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        height: 22px;
+        margin-top: -11px;
+        //background: #ccc;
+        opacity: .7;
+        visibility: visible;
+        transition: opacity .3s 0s, visibility .3s 0s;
+        cursor: pointer;
+
+        &.desabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .prev-video{
+        left: -20px;
+        background-image: url('/img/prev-slide-serial-2.png');
+        background-repeat: no-repeat;
+    }
+
+    .next-video{
+        right: -20px;
+        background-image: url('/img/next-slide-serial-2.png');
+        background-repeat: no-repeat;
+    }
+
+}
+
+.info-video{
+    line-height: 0;
+    margin-top: 25px;
+    text-align: left;
+
+    .title-video{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1;
+        color: #ffffff;
+        font-family:'sans', sans-serif;
+    }
+
+    .date-video{
+        float: right;
+        font-size: 14px;
+        line-height: 1;
+        color: #ffffff;
+        font-family:'sans', sans-serif;
+
+        span{
+            opacity: .5;
+        }
+    }
+}
+
+.list-season{
+    margin: 30px -45px 0 -45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.season-btn{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    font-family:'sans', sans-serif;
+    text-transform: uppercase;
+    color: #00aeef;
+    border: 1px solid #00aeef;
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: color .3s 0s, border .3s 0s;
+    cursor: pointer;
+    padding: 8px 30px 8px 30px;
+
+    &.active{
+        color: #ffffff;
+        border: 1px solid #fff;
+    }
+
+    &:hover{
+        color: #ffffff;
+        border: 1px solid #fff;
+    }
+}
+
+.list-btn{
+    margin-bottom: 30px;
+}
+
+.list-slider-season{
+    position: relative;
+}
+
+.item-slider-season{
+    display: none;
+    height: 320px;
+
+    .swiper-button-next, .swiper-button-prev{
+        position: absolute;
+        top: 122px;
+        width: 14px;
+        height: 26px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .3;
+        visibility: visible;
+        transition: opacity .3s 0s, visibility .3s 0s;
+
+        &:hover{
+            opacity: .7;
+        }
+
+        &.disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-button-prev{
+        left: -20px;
+        background-image: url('/img/prev-slide-serial-2.png');
+    }
+
+    .swiper-button-next{
+        right: -20px;
+        background-image: url('/img/next-slide-serial-2.png');
+    }
+
+    .swiper-pagination-season{
+        width: 100%;
+        text-align: center;
+        margin-top: 13px;
+    }
+
+    .swiper-pagination-switch{
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        margin-right: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: .5;
+        transition: opacity .3s 0s;
+
+        &.swiper-active-switch{
+            opacity: 1;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    .custom-pagin-elem{
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        margin-right: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: .5;
+        transition: opacity .3s 0s;
+
+        &.active{
+            opacity: 1;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.title-slider-season{
+    font-size: 22px;
+    color: #ffffff;
+    opacity: .5;
+    font-family:'sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.slide-content-serie{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 12px;
+    overflow: hidden;
+    width:calc(25% - 10px);
+    height: 246px;
+    border: 1px solid #2d2d2d;
+    box-sizing: border-box;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover{
+        .image-series{
+            &:before{
+                opacity: .15;
+                visibility: visible;
+            }
+            &:after{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &.active{
+        .image-series{
+            &:before{
+                opacity: .15;
+                visibility: visible;
+            }
+            &:after{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+}
+
+.image-series{
+    position: relative;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: 50%;
+    //width: 260px;
+    width: 100%;
+    height: 154px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #1b1b1b;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s 0s, visibility .3s 0s;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: url('/img/icon-video');
+        cursor: pointer;
+        left: 50%;
+        top: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s 0s, visibility .3s 0s;
+    }
+
+
+}
+
+.number-series{
+    font-size: 14px;
+    line-height: 1;
+    color: #ffffff;
+    font-family:'sans', sans-serif;
+    margin-bottom: 9px;
+    padding-left: 10px;
+}
+
+.name-series{
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+    font-family:'sans', sans-serif;
+    opacity: .5;
+    margin-bottom: 9px;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date-series{
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+    font-family:'sans', sans-serif;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1300px){
+    .main-trailer {
+        .trailer-details{
+            margin-left: 650px;
+        }
+
+        .trailer-video {
+            float: left;
+            width: 606px;
+        }
+    }
+}
+
+
+/* ==========================================================================
+                serial detaile STYLES
+   ========================================================================== */
+
+.film-inner{
+
+    .film-trailer{
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-bottom: 30px;
+    }
+
+
+    .two-columns{
+        font-size: 0;
+    }
+
+    .column{
+        display: inline-block;
+        width: calc(50% - 15px);
+        margin-right: 30px;
+        overflow: hidden;
+        vertical-align: top;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+
+    .series-info, .series-role{
+        li{
+            font-family: 'geo', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #363636;
+            line-height: 16px;
+            padding: 10px 0 10px 200px;
+            overflow: hidden;
+
+            i {
+                float: left;
+                margin-left: -200px;
+                color: #a1a0a0;
+                white-space: normal;
+            }
+        }
+
+    }
+
+    .film-text{
+        p{
+            font-family: 'geo', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #363636;
+            line-height: 32px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.name-serial{
+    color: #363636;
+    font-family: 'sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.name-season{
+    color: #363636;
+    font-family: 'sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.detail-serial-info{
+    color: #363636;
+    font-family: 'sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: left;
+
+    span{
+        opacity: 0.5;
+    }
+
+    .date{
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    .number-series{
+        color: #363636;
+        font-family: 'sans', sans-serif;
+        font-size: 22px;
+        padding-left: 0;
+    }
+
+}
+
+.trailer-buttons{
+    .prev-serial, .next-serial{
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 44px;
+        cursor: pointer;
+        
+        &.disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .prev-serial{
+        left: 0;
+        background-image: url('/img/prev-serial.png');
+    }
+
+    .next-serial{
+        right: 0;
+        background-image: url('/img/next-serial.png');
+    }
+}
+
+.slider-season-btn-detail{
+    position: relative;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    .active{
+        .season-btn-detail{
+            margin-bottom: 0;
+        }
+
+        margin-bottom: 30px;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        width: 9px;
+        height: 15px;
+        cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s 0s, visibility .3s 0s;
+
+        &.disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-button-prev{
+        left: 0;
+        background: url('/img/prev-slide-btn.png') no-repeat;
+    }
+
+    .swiper-button-next{
+        right: 0;
+        background: url('/img/next-slide-btn.png') no-repeat;
+    }
+}
+
+
+.season-btn-detail{
+    color: #00aeef;
+    font-family: 'sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #00aeef;
+    transition: color .3s, border .3s 0s;
+    padding: 15px 26px;
+    margin-right: 13px;
+    margin-bottom: 40px;
+    display: inline-block;
+
+    &.active{
+        border: 1px solid #d2d2d2;
+        color: #363636;
+    }
+
+    &:hover{
+        border: 1px solid #d2d2d2;
+        color: #363636;
+    }
+}
+
+.slider-detail-season-wrapper{
+    position: relative;
+    margin-bottom: 60px;
+
+    .overflow{
+        overflow: hidden;
+        height: 290px;
+    }
+
+    .swiper-slide{
+        font-size: 0;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        position: absolute;
+        top: 122px;
+        width: 14px;
+        height: 26px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .3;
+        visibility: visible;
+        transition: opacity .3s 0s, visibility .3s 0s;
+
+        &:hover{
+            opacity: .7;
+        }
+
+        &.disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-button-prev{
+        left: -30px;
+        background-image: url('/img/prev-detail-serail.png');
+    }
+
+    .swiper-button-next{
+        right: -30px;
+        background-image: url('/img/next-detail-serail.png');
+    }
+
+    .swiper-pagination-season{
+        width: 100%;
+        text-align: center;
+        margin-top: 13px;
+    }
+
+    .swiper-pagination-switch{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #515151;
+        margin-right: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: .25;
+        transition: opacity .3s 0s;
+
+        &.swiper-active-switch{
+            opacity: 1;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .slide-content-serie{
+        border: 1px solid #d2d2d2;
+        box-sizing: border-box;
+    }
+
+
+    .number-series{
+        font-size: 14px;
+        line-height: 1;
+        color: #363636;
+        font-family:'sans', sans-serif;
+        margin-bottom: 9px;
+        padding-left: 11px;
+    }
+
+    .name-series{
+        font-size: 14px;
+        opacity: 0.5;
+        color: #363636;
+        line-height: 1;
+        font-family:'sans', sans-serif;
+        margin-bottom: 9px;
+        padding-left: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .date-series{
+        font-size: 14px;
+        color: #363636;
+        line-height: 1;
+        font-family:'sans', sans-serif;
+        margin-bottom: 15px;
+        padding-left: 11px;
+    }
+}
+
+.similar-series{
+    margin-bottom: 110px;
+}
+
+.title-similar-series{
+    color: #363636;
+    font-family:'sans', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.list-similar-series{
+    font-size: 0;
+    line-height: 0;
+}
+
+.item-similar-series{
+    display: inline-block;
+    width:calc(25% - 20px);
+    margin-right: 25px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover{
+        .name-similar-series{
+            color: #ee2e24;
+        }
+
+        .image-similar-series{
+            &:before{
+                opacity: .4;
+                visibility: visible;
+            }
+        }
+
+
+    }
+}
+
+.image-similar-series{
+    position: relative;
+    height: 225px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s 0s, visibility .3s 0s;
+    }
+}
+
+.name-similar-series{
+    color: #363636;
+    font-family:'sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    transition: color .3s 0s;
+}
+
+.mobile-slider-detail-season-wrapper{
+    display: none;
+    position: relative;
+    margin-bottom: 60px;
+
+    .overflow{
+        overflow: hidden;
+        height: 290px;
+    }
+
+    .swiper-slide{
+        font-size: 0;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        position: absolute;
+        top: 0;
+        width: 14px;
+        height: 26px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .3;
+        visibility: visible;
+        transition: opacity .3s 0s, visibility .3s 0s;
+
+        &:hover{
+            opacity: .7;
+        }
+
+        &.disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .swiper-button-prev{
+        left: 0;
+        background-image: url('/img/prev-detail-serail.png');
+    }
+
+    .swiper-button-next{
+        right: 0;
+        background-image: url('/img/next-detail-serail.png');
+    }
+
+    .swiper-pagination-season{
+        width: 100%;
+        text-align: center;
+        margin-top: 13px;
+    }
+
+    .swiper-pagination-switch{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #515151;
+        margin-right: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: .25;
+        transition: opacity .3s 0s;
+
+        &.swiper-active-switch{
+            opacity: 1;
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .slide-content-serie{
+        border: 1px solid #d2d2d2;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+
+    .number-series{
+        font-size: 14px;
+        line-height: 1;
+        color: #363636;
+        font-family:'sans', sans-serif;
+        margin-bottom: 9px;
+        padding-left: 11px;
+    }
+
+    .name-series{
+        font-size: 14px;
+        opacity: 0.5;
+        color: #363636;
+        line-height: 1;
+        font-family:'sans', sans-serif;
+        margin-bottom: 9px;
+        padding-left: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .date-series{
+        font-size: 14px;
+        color: #363636;
+        line-height: 1;
+        font-family:'sans', sans-serif;
+        margin-bottom: 15px;
+        padding-left: 11px;
+    }
+
+    .control-wrapper{
+        position: relative;
+        text-align: center;
+        font-size: 0;
+    }
+
+    .count-wrapper-element{
+        display: inline-block;
+        color: #292929;
+        font-weight: 400;
+        font-size: 18px;
+        font-family:'sans', sans-serif;
+
+        .number{
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        .count{
+            display: inline-block;
+            font-size: 24px;
+        }
+    }
+
+}
+
+@media (max-width: 960px) {
+    .slider-detail-season-wrapper{
+        display: none;
+    }
+
+    .mobile-slider-detail-season-wrapper{
+        display: block;
+    }
+
+    .detail-serial-info {
+        .number-series{
+            display: block;
+        }
+
+        .date{
+            margin-left: 0;
+        }
+    }
+
+    .film-inner {
+        .column{
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .series-info, .series-role{
+            li{
+                padding-left: 0;
+
+                i{
+                    float: none;
+                    display: block;
+                    margin-bottom: 10px;
+                    margin-left: 0;
+                }
+            }
+
+        }
+
+        .film-trailer .trailer-buttons .buttons-item{
+            font-size: 12px;
+            width: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: inline-block;
+        }
+
+        .trailer-buttons {
+            .prev-serial{
+                left: -10px;
+            }
+            .next-serial{
+                right: -10px;
+            }
+        }
+    }
+
+    .slider-season-btn-detail{
+        .season-btn-detail{
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    }
+}
+

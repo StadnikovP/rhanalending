@@ -1,0 +1,38 @@
+//@font-face {
+//    font-family: 'robotoconden';
+//    src: local('roboto condensed'), local('roboto-condensed'),
+//    url('/dist/fonts/roboto-condensed_allfont.ru-webfont.woff2') format('woff2'),
+//    url('/dist/fonts/roboto-condensed_allfont.ru-webfont.woff') format('woff');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+
+
+
+
+@mixin arial {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin robotoconden {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin fontStyle($fz,$lh,$ls) {
+    font-size: $fz * 1px;
+    font-size: ($fz / 10) *1rem;
+    line-height: $lh * 1px;
+    line-height: ($lh / 10) *1rem;
+    letter-spacing: $ls *1px;
+}
+
+@mixin plasholder{
+    &::-webkit-input-placeholder {@content};
+    &::-moz-placeholder    {@content};
+    &:-moz-placeholder     {@content};
+    &:-ms-input-placeholder     {@content};
+}

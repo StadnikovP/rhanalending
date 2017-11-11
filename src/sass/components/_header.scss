@@ -1,0 +1,234 @@
+/* ==========================================================================
+                HEADER STYLES
+   ========================================================================== */
+
+html {
+    height: auto;
+    min-height: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.block-clear{
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.vertical-center{
+    &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+.header{
+    position: absolute;
+    display: flex;
+    //align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: translate(0, -110%);
+    transition: transform 1s .3s;
+
+    &.wrapper-fix{
+        margin-top: 10px;
+    }
+}
+
+.navigation-list{
+    font-size: 0;
+    margin-top: 39px;
+
+    .link-nav{
+        @include fontStyle(15,15,0);
+        text-transform: uppercase;
+        color: $cWhite;
+        text-decoration: none;
+        transition: color .3s;
+        //margin-right: 20px;
+        @include arial;
+        padding: 10px;
+
+        &:hover{
+            color: $cRed;
+        }
+    }
+
+    .link-nav + .link-nav{
+        margin-left: 20px;
+    }
+}
+
+.wrapper-logo{
+    font-size: 0;
+    line-height: 0;
+
+    .logo{
+        display: inline-block;
+    }
+
+    .logo + .logo{
+        margin-left: 60px;
+    }
+}
+
+
+.mobile-btn-menu {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 16px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $cWhite;
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $cWhite;
+        }
+
+        &:before {
+            top: -7px;
+        }
+
+        &:after {
+            bottom: -7px;
+        }
+    }
+}
+
+/**
+ * Стиль 2
+ *
+ * «Гамбургер» превращается в «x» (класс active).
+ * Берется исходное состояние, затем полоски плавно перемещаются в центр
+ * и трансформируются в «x».
+*/
+.mobile-btn-menu {
+
+    span {
+        transition: background 0.2s 0.1s;
+
+        &:before {
+            transition: top .3s .3s, transform .3s 0s, background .2s 0s;
+        }
+        &:after {
+            transition: bottom .3s .3s, transform .3s 0s, background .2s 0s;
+        }
+    }
+
+    &.active {
+        span {
+            background: none;
+            &:before {
+                //background: $cWhite;
+                top: 0;
+                transform: rotate(45deg);
+                transition: top .3s 0s, transform .3s .3s;
+            }
+            &:after {
+                //background: $cWhite;
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom .3s 0s, transform .3s .3s;
+            }
+        }
+    }
+}
+
+.mobile-nav-bar{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #cccccc;
+    padding: 80px 30px 30px 30px;
+    transform: translateX(100%);
+    transition: transform .3s 0s;
+    z-index: 9;
+
+    &.active{
+        transform: translateX(0);
+    }
+
+    .link-nav{
+        display: block;
+        @include fontStyle(15,15,0);
+        text-transform: uppercase;
+        color: $cWhite;
+        text-decoration: none;
+        transition: color .3s;
+        margin-right: 20px;
+        @include arial;
+        padding: 10px;
+        padding-left: 0;
+
+        &:hover{
+            color: $cRed;
+        }
+    }
+}
+
+.tv{
+  .screen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s 0s;
+
+    &.active{
+      opacity: 1;
+    }
+  }
+}

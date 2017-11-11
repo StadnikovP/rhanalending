@@ -1,0 +1,73 @@
+/* ==========================================================================
+                HEADER STYLES
+   ========================================================================== */
+
+html {
+    height: auto;
+    min-height: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.block-clear{
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.vertical-center{
+    &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+
+.header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: translate(0, -70px);
+    transition: transform 1s;
+
+    &.wrapper-fix{
+        margin-top: 10px;
+    }
+}
+
+.navigation-list{
+
+    .link-nav{
+        @include fontStyle(15,15,0);
+        text-transform: uppercase;
+        color: $cWhite;
+        text-decoration: none;
+        transition: color .3s;
+        margin-right: 20px;
+        @include arial;
+        padding: 10px;
+
+        &:hover{
+            color: $cRed;
+        }
+    }
+}
