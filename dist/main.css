@@ -297,25 +297,34 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s, visibility .5s; }
-  .video-block video {
-    object-fit: cover;
+  .video-block:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background: #000;
+    opacity: .3;
+    z-index: 5; }
 
-.ie-brouzer video {
-  object-fit: none;
+.video-container {
+  position: relative;
+  background: transparent;
+  opacity: 0;
+  transition: opacity .3s 0s; }
+  .video-container.active {
+    opacity: 1; }
+
+.ytplayer-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  -ms-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%); }
+  top: 0; }
 
 .header-content-wrapper {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -330,7 +339,8 @@ body {
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s .3s, visibility 1s .3s; }
+  transition: opacity 1s .3s, visibility 1s .3s;
+  z-index: 5; }
   .header-content-wrapper .title-project {
     max-width: 500px;
     font-size: 24px;
@@ -886,12 +896,174 @@ body {
   color: #111111;
   font-weight: 400; }
 
+@media (max-width: 1220px) {
+  .mouse-element {
+    bottom: 3%;
+    width: 30px;
+    margin-left: -15px; }
+  .wrapper-fix {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box; }
+  .about--item-element {
+    width: 22%;
+    margin-right: 3%; }
+    .about--item-element:last-child {
+      margin-right: 0; }
+  .program--content {
+    padding-right: 30px;
+    padding-left: 50px; }
+    .program--content.right {
+      padding-right: 50px;
+      padding-left: 30px; } }
+
 /* ==========================================================================
                MOBILE STYLES
    ========================================================================== */
+@media (max-width: 992px) {
+  .program--image-block {
+    position: relative;
+    width: 100%;
+    height: calc(50vw); }
+    .program--image-block.right {
+      left: 0; }
+  .program--bg-block {
+    width: 100%; }
+    .program--bg-block.right {
+      left: 0; } }
+
 /* ==========================================================================
                 END MOBILE STYLES
    ========================================================================== */
+@media (max-width: 768px) {
+  .wrapper-logo .logo {
+    width: 50px; }
+    .wrapper-logo .logo img {
+      width: 100%; }
+    .wrapper-logo .logo + .logo {
+      margin-left: 15px; }
+  .header {
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-transform: translate(0, -120%);
+        transform: translate(0, -120%); }
+  .mobile-btn-menu {
+    display: block; }
+  .mobile-nav-bar {
+    display: block; }
+  .navigation-list {
+    display: none; }
+  .header {
+    position: relative;
+    margin-bottom: 30px; }
+    .header .navigation-list {
+      text-align: center; }
+  .navigation-list .link-nav {
+    margin-right: 10px;
+    padding: 0 10px; }
+  .header-content-wrapper {
+    padding: 0 10px; }
+    .header-content-wrapper .title-project {
+      font-size: 20px;
+      font-size: 2rem;
+      line-height: 20px;
+      line-height: 2rem;
+      letter-spacing: 0px;
+      margin-bottom: 15px; }
+    .header-content-wrapper h1 {
+      font-size: 84px;
+      font-size: 8.4rem;
+      line-height: 84px;
+      line-height: 8.4rem;
+      letter-spacing: 0px;
+      margin-bottom: 20px; }
+    .header-content-wrapper .second-title {
+      font-size: 70px;
+      font-size: 7rem;
+      line-height: 70px;
+      line-height: 7rem;
+      letter-spacing: 0px;
+      margin-bottom: 40px; }
+  .mouse-element {
+    display: none; }
+  .about-elements {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .about--item-element {
+    width: 46%;
+    margin-right: 0; }
+  .about--image {
+    padding-bottom: 70px; }
+  .program--content {
+    padding: 0 30px !important;
+    width: 100%;
+    max-width: 100%; }
+  .program--bg-block.black-bg {
+    background-image: linear-gradient(180deg, #ff4d5a 0%, #f02028 100%); }
+  .partner--item {
+    width: 50%; }
+  .two-columns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .two-columns .columns {
+      width: 100%;
+      margin-bottom: 20px; }
+  .list-partners {
+    display: block;
+    margin-top: 60px; }
+  .partner-element {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center; }
+    .partner-element:nth-child(3n+3) {
+      text-align: center; }
+    .partner-element:nth-child(3n+2) {
+      text-align: center; }
+    .partner-element img {
+      max-width: 100%; }
+  .custom-partner {
+    height: auto;
+    padding: 20px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .custom-partner img + img {
+      margin-left: 0;
+      margin-top: 20px; } }
+
+@media (max-width: 550px) {
+  .header-content-wrapper .title-project {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 20px;
+    line-height: 2rem;
+    letter-spacing: 0px;
+    margin-bottom: 15px; }
+  .header-content-wrapper h1 {
+    font-size: 54px;
+    font-size: 5.4rem;
+    line-height: 54px;
+    line-height: 5.4rem;
+    letter-spacing: 0px;
+    margin-bottom: 20px; }
+  .header-content-wrapper .second-title {
+    font-size: 40px;
+    font-size: 4rem;
+    line-height: 40px;
+    line-height: 4rem;
+    letter-spacing: 0px;
+    margin-bottom: 40px; }
+  .partner--item {
+    width: 70%;
+    margin: 0 auto 40px; } }
+
+@media (max-width: 320px) {
+  .about h2, .program--content h2, .news h2 {
+    font-size: 38px;
+    font-size: 3.8rem;
+    line-height: 48px;
+    line-height: 4.8rem;
+    letter-spacing: 0px; } }
+
 /* ==========================================================================
                 serial STYLES
    ========================================================================== */

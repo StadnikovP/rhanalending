@@ -8,15 +8,16 @@
 <!--[if IE 9]>
 <html class="no-js ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js" lang="ru"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная</title>
-    <meta name="description" content="">
+    <title>Проект корпорации RHANA «Культура жить». Перекрестные год России и Японии.</title>    	
+    <meta name="description" content="Корпорация RHANA в рамках перекрестного года России и Японии представляет проект «Культура жить». Культурные и научные мероприятия.">
     <meta name="viewport" id="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="dist/main.css" type="text/css">
+    <link rel="stylesheet" href="dist/main.min.css" type="text/css">
     <script>
         var appConfig = {
             'mobileVersion':false,
@@ -37,15 +38,12 @@
             appConfig.desktopVersion = !appConfig.mobileVersion;
         })(768,940,'viewport');
     </script>
-
 </head>
 <body>
     <div class="site-body">
-        <section class="header-wrapper" style="background-image: url(dist/img/first-screen-bg.jpg);">
-            <div class="video-block">
-                <video class="js-video" id="js-video" loop rel="nofollow">
-                    <source src="dist/video/bg_1080p.mp4" rel="nofollow" type="video/mp4">
-                </video>
+        <section class="header-wrapper" style="background-image: url('dist/img/image_video-bg-new.jpg');">
+            <div class="video-block tv">
+                <div id="video" class="video-container"></div>
             </div>
             <header class="header wrapper-fix">
                 <div class="wrapper-logo">
@@ -54,7 +52,10 @@
                         <img src="dist/img/logo-new-1.png" alt="logo">
                     </div>
                     <div class="logo">
-                        <img src="dist/img/logo-new-2.png" alt="logo">
+                        <img src="dist/img/logo-header-new.png" alt="logo">
+                    </div>
+                    <div class="logo">
+                        <img src="/dist/img/partner-logo.png" alt="logo" style="max-width: 130px;">
                     </div>
                 </div>
                 
@@ -105,7 +106,7 @@
                     <div class="about--item-element">
                         <div class="about--image" ><img src="dist/img/city-3.png" alt="city-3"></div>
                         <div class="about--name-city">Сочи</div>
-                        <div class="about--text">4 ярких культырных<br> события предстоящего года</div>
+                        <div class="about--text">4 ярких культурных<br> события предстоящего года</div>
                     </div>
                     <div class="about--item-element">
                         <div class="about--image" ><img src="dist/img/city-4.png" alt="city-4"></div>
@@ -125,7 +126,7 @@
                     <div class="about--text-news js-wrapper-text" data-height="150">
                         <div class="inner-content">
                             <p>Япония и Россия имеют огромный опыт и большую созидательную историю дружбы между странами.<br> Директор отдела международных связей Бюро высшего образования Министерства образования, культуры, спорта, науки и технологий Японии Хиде`ки Ивабучи напомнил о давней истории российско-японских связей в области образования: «В средние века Япония в течение долгого времени была закрытой страной и, следовательно, в области науки имела мало отношений с другими странами. Однако в XVIII веке в закрытую Японию проникли замечательные российские знания, которые заложили основу японской науки».</p>
-                            <p>Япония и Россия имеют огромный опыт и большую созидательную историю дружбы между странами.<br> Директор отдела международных связей Бюро высшего образования Министерства образования, культуры, спорта, науки и технологий Японии Хидеки Ивабучи напомнил о давней истории российско-японских связей в области образования: «В средние века Япония в течение долгого времени была закрытой страной и, следовательно, в области науки имела мало отношений с другими странами. Однако в XVIII веке в закрытую Японию проникли замечательные российские знания, которые заложили основу японской науки».</p>
+                            <p>Япония и Россия имеют огромный опыт и большую созидательную историю дружбы между странами.<br/> Директор отдела международных связей Бюро высшего образования Министерства образования, культуры, спорта, науки и технологий Японии Хиде`ки Ивабучи напомнил о давней истории российско-японских связей в области образования: «В средние века Япония в течение долгого времени была закрытой страной и, следовательно, в области науки имела мало отношений с другими странами. Однако в XVIII веке в закрытую Японию проникли замечательные российские знания, которые заложили основу японской науки».</p>
                         </div>
                     </div>
                     <a href="#" class="pseudo-link js-pseudo-link ">Читать ещё</a>
@@ -136,8 +137,8 @@
         </section>
 
         <section class="program" id="program">
-            <div class="program--row program--custom">
-                <div class="program--image-block right" style="background-image: url(dist/img/photo-2.jpg);"></div>
+            <div class="program--row">
+                <div class="program--image-block right" style="background-image: url('dist/img/program-1.jpg');"></div>
                 <div class="program--bg-block red-bg block-clear ">
                     <div class="program--content right">
                         <div class="title-section">Программа</div>
@@ -172,14 +173,14 @@
             </div>
 
             <div class="program--row program--custom">
-                <div class="program--image-block" style="background-image: url(dist/img/photo-3.jpg);"></div>
+                <div class="program--image-block" style="background-image: url('dist/img/photo-3.jpg');"></div>
                 <div class="program--bg-block black-bg block-clear right">
                     <div class="program--content">
                         <h2>Геликон Опера</h2>
                         <div class="program--place">Москва, 28 февраля 2018</div>
                         <div class="program--item">
                             <div class="program--name">Благотворительный концерт «Счастье жить. Детям России и Японии».</div>
-                            <div class="program--text">Часть средств от концерта будут перечислены Красному кресту Японии и благотворительному фонду «Линия жизни» для спасения тяжело больных детей.</div>
+                            <div class="program--text">Часть средств от концерта будут перечислены Красному кресту Японии и благотворительному фонду «Линия жизни» на лечение тяжелобольных детей.</div>
                             <div class="program--name">Предварительная программа:</div>
                             <div class="program--text">Вечер будут вести <b>Андрей Малахов</b></div>
                             <div class="program--text">В концерте участвуют: <b>Марихира Ивата (Япония) - солист балета Большого театра, Владислав Демченко, и ведущая прима-балерина русского балета</b></div>
@@ -200,7 +201,7 @@
                 </div>
             </div>
             <div class="program--row">
-                <div class="program--image-block right" style="background-image: url(dist/img/photo-4.jpg);"></div>
+                <div class="program--image-block right" style="background-image: url('dist/img/photo-4.jpg');"></div>
                 <div class="program--bg-block red-bg block-clear ">
                     <!--<div class="program&#45;&#45;content right">-->
                     <div class="program--content">
@@ -212,7 +213,7 @@
                                 <!--<p>Каждое культурное и медицинское мероприятие будет <b>освещено в Интерфакс.</b></p>-->
                             <!--</div>-->
                         <!--</div>-->
-                        <h2>&nbsp</h2>
+                        <h2>&nbsp;</h2>
                         <div class="program--item">
                             <div class="program--name">Санкт-Петербург, май 2018.</div>
                             <div class="program--text">Эрмитажный театр.</div>
@@ -270,44 +271,43 @@
 
                 <div class="list-partners">
                     <div class="partner-element">
-                        <img src="/dist/img/partners-1.jpg" alt="">
+                        <img src="/dist/img/KOS-01.png" alt="partner" style="max-width: 90%;">
                     </div>
                     <div class="partner-element">
-                        <img src="/dist/img/partners-2.jpg" alt="" style="width: 100%">
+                        <img src="/dist/img/partners-2.jpg" alt="partner" style="width: 100%">
                     </div>
                     <div class="partner-element" >
-                        <img src="/dist/img/partners-3.jpg" alt="" >
+                        <img src="/dist/img/partners-3.jpg" alt="partner" >
                     </div>
                     <div class="partner-element">
-                        <img src="/dist/img/partners-4.jpg" alt="">
+                        <img src="/dist/img/partners-4.jpg" alt="partner">
                     </div>
                     <div class="partner-element" >
-                        <img src="/dist/img/partners-5.jpg" alt="" >
+                        <img src="/dist/img/partners-5.jpg" alt="partner" >
                     </div>
                     <div class="partner-element">
-                        <img src="/dist/img/partners-6.jpg" alt="">
+                        <img src="/dist/img/partners-6.jpg" alt="partner">
                     </div>
                     <div class="partner-element">
-                        <img src="/dist/img/partners-7.jpg" alt="">
+                        <img src="/dist/img/partners-7.jpg" alt="partner">
                     </div>
                     <div class="partner-element" >
-                        <img src="/dist/img/partners-8.jpg" alt="">
+                        <img src="/dist/img/partners-8.jpg" alt="partner">
                     </div>
                     <div class="partner-element">
-                        <img src="/dist/img/partners-9.jpg" alt="">
+                        <img src="/dist/img/partners-9.jpg" alt="partner">
                     </div>
                 </div>
-
-
             </div>
 
             <div class="custom-partner" style="background-image: url('/dist/img/new-bg.jpg');">
-                <img src="/dist/img/partners-10.png" alt="">
+                <img src="/dist/img/partners-10.png" alt="partner">
+                <img src="/dist/img/partner-logo.png" alt="partner">
             </div>
 
         </section>
 
-        <section class="news" id="news" style="background-image: url(dist/img/bg-news.jpg);">
+        <section class="news" id="news" style="background-image: url('dist/img/bg-news.jpg');">
             <div class="wrapper-fix news-wrapper">
                 <div class="title">Новости</div>
                 <h2>Научные конференции и культурные события корпорации RHANA</h2>
@@ -315,15 +315,17 @@
                 <div class="two-columns">
                     <div class="columns">
                         <div class="news--item">
-                            <div class="news--title">КУЛЬТУРНЫЕ СОБЫТИЯ</div>
+                            <div class="news--title">ПРЕСС-КОНФЕРЕНЦИЯ «ЯПОНСКИЕ БИОТЕХНОЛОГИИ — ПРИРОДНАЯ МАТРИЦА АКТИВНОГО ДОЛГОЛЕТИЯ»</div>
                             <div class="news--img">
-                                <img src="dist/img/news-1.jpg" alt="">
+                                <img src="dist/img/news-1-new.jpg" alt="">
                             </div>
                             <div class="element-reed-text">
                                 <div class="news-text js-wrapper-text" data-height="115">
                                     <div class="inner-content">
-                                        <p>Корпорация RHANA - ежегодный партнер Московского  международного кинофестиваля, генеральный парнер дня Японии в Росии в рамках cosmetic international парнер международного турне спектакля Юкио Мисама «Исповедь маски» и многие другие</p>
-                                        <p>Корпорация RHANA - ежегодный партнер Московского  международного кинофестиваля, генеральный парнер дня Японии в Росии в рамках cosmetic international парнер международного турне спектакля Юкио Мисама «Исповедь маски» и многие другие</p>
+                                    	<p>7 июня в пресс-центре международного агентства «Интерфакс» прошла конференция, посвященная японским биотехнологиям. Президент Медицинской Корпорации RHANA Екатерина Диброва, директор Японского общества пластической и восстановительной хирургии Шиничи Сояно (Shunichi Soyano) и известные российские ученые, в числе которых академик Российской академии медико-технических наук Лариса Гладских и директор Физтех-школы биологической и медицинской физики МФТИ Сергей Леонов выступили с инициативой развития в России плацентарной медицины.</p>
+										<p>Плацентарные препараты используются в Японии уже более 60 лет, они зарегистрированы и разрешены к применению в России. Рекордная продолжительность жизни японцев — хороший пример эффективности системы здравоохранения. В Японии уже много лет действует государственная страховая медицинская программа, в которую входит использование плацентарных препаратов, и российские ученые призывают воспользоваться примером и уникальным опытом зарубежных коллег. Корпорация RHANA в течение последних 12 лет представляет на российском рынке уникальные японские плацентарные препараты.</p>
+										<p>«Плацентарные препараты активируют защитные силы организма, способствуют восстановлению после инсульта и замедляют процесс старения организма. В связи с возможным повышением пенсионного возраста биоплацентарная медицина может быть особенно актуальной», — подчеркнула Лариса Гладских.</p>
+										<p>Биоплацентарные препараты помогают организму восстановиться после хирургических операций, отметил на пресс-конференции Шиничи Сояно. Сергей Леонов, добавил: «Биоплацентарные препараты — это не стволовые клетки. Хотел бы подчеркнуть, что эти препараты представляют собой одну из самых эффективных природных матриц, обеспечивающих коррекцию метаболических процессов организма человека любого возраста».</p>
                                     </div>
                                 </div>
                                 <a href="#" class="pseudo-link js-pseudo-link ">Читать ещё</a>
@@ -334,15 +336,26 @@
                     </div>
                     <div class="columns">
                         <div class="news--item">
-                            <div class="news--title">НАУЧНЫЕ СОБЫТИЯ</div>
+                            <div class="news--title">ЗАСЕДАНИЕ ДИСКУССИОННОГО КЛУБА "КРАСОТА В ЖЕНСКИХ РУКАХ"</div>
                             <div class="news--img">
-                                <img src="dist/img/news-2.jpg" alt="">
+                                <img src="dist/img/news-2-new.jpg" alt="">
                             </div>
                             <div class="element-reed-text">
                                 <div class="news-text js-wrapper-text" data-height="115">
                                     <div class="inner-content">
-                                        <p>Корпорация RHANA - ежегодный партнер Московского  международного кинофестиваля, генеральный парнер дня Японии в Росии в рамках cosmetic international парнер международного турне спектакля Юкио Мисама «Исповедь маски» и многие другие</p>
-                                        <p>Корпорация RHANA - ежегодный партнер Московского  международного кинофестиваля, генеральный парнер дня Японии в Росии в рамках cosmetic international парнер международного турне спектакля Юкио Мисама «Исповедь маски» и многие другие</p>
+                                		<p>6 марта в РИА-Новости, в Президентском зале МИА "Россия сегодня" состоялось заседание Дискуссионного клуба "Красота в женских руках".</p>
+
+										<p>Лидеры медицинской отрасли и бьюти-индустрии в очередной раз собрались, чтобы обсудить комплексные подходы к здоровью женщины и современные тенденции красоты. Главный внештатный специалист – пластический хирург Минздрава РФ, завкафедрой пластической и реконструктивной хирургии, косметологии клеточных технологий РНИМУ им. Н.И. Пирогова Минздрава РФ Наталья Мантурова рассказала о симбиозе пластической хирургии, косметологии и искусства.</p>
+
+										<p>По ее словам, в современном мире много предложений по коррекции внешности, однако посыл современных пластических хирургов и косметологов заключается в том, чтобы в этом изобилии предложений не потерять свою индивидуальность. "Каждая женщина ‒ единственная, необыкновенная и привлекательная", ‒ добавила Наталья Манутрова.</p>
+
+										<p>Продолжая тему красоты в искусстве, заведующая отделом образовательно-выставочных проектов Государственного музея изобразительных искусств имени А.С. Пушкина Сурия Садекова выразила мнение, что искусство ищет красоту там, где ее нет, и даже в небезусловной красоте оно находит свою эстетику. "Каждая эпоха диктует свои каноны красоты, и мы не имеем права стандартизировать внешность человека, который обращается к пластическому хирургу", — подчеркнула она.</p>
+
+										<p>С докладом на тему "Инновационные биотехнологии для здоровья и красоты" выступила Екатерина Диброва - основатель и руководитель Медицинской корпорации RHANA, кандидат экономических наук, действительный член Международной академии наук (IAS), член академии РАМТН. Член Всероссийской организации качества в составе Комитета по качеству медицинской помощи РФ. Член Японского Медицинского общества клинической плацентарной медицины (JSCPM).</p>
+
+										<p>В рамках мероприятия прозвучали выступления многих практикующих специалистов, был представлен ряд инновационных разработок, новые проекты исследований, новинки производственных и медицинских технологий и результаты их применений в косметологии, пластической хирургии.</p>
+
+										<p>(<a href="https://ria.ru/beauty_medicine/20170307/1489447529.html">Источник РИА Новости</a>)</p>
                                     </div>
                                 </div>
                                 <a href="#" class="pseudo-link js-pseudo-link ">Читать ещё</a>
@@ -408,7 +421,9 @@
 
 
 
-<script src="dist/main.js"></script>
+    <script src="dist/main.js"></script>
+    <!--<script src='src/js/vendors/jquery.youtubebackground.js'></script>-->
+
 </body>
 
 </html>    

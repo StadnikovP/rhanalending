@@ -15,6 +15,7 @@ var assetsPath = './dist';
 
 var jslibs = [
   sourcesPath + '/js/vendors/jquery-3.1.0.min.js',
+    sourcesPath + '/js/vendors/jquery.youtubebackground.js',
     sourcesPath + '/js/vendors/smooth.scroll.js',
     sourcesPath + '/js/vendors/inview.min.js'
 ];
