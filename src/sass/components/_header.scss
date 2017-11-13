@@ -39,7 +39,6 @@ body {
 .header{
     position: absolute;
     display: flex;
-    //align-items: center;
     justify-content: space-between;
     top: 0;
     left: 0;
@@ -80,13 +79,22 @@ body {
 .wrapper-logo{
     font-size: 0;
     line-height: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 41%;
 
     .logo{
         display: inline-block;
+        max-width: 30%;
+
+        img{
+            max-width: 100%;
+        }
     }
 
     .logo + .logo{
-        margin-left: 60px;
+        margin-left: 20px;
     }
 }
 

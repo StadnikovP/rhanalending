@@ -32,6 +32,27 @@
 
 }
 
+@media (max-width: 1100px){
+  .wrapper-logo {
+    .logo{
+      +.logo{
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .header-content-wrapper {
+    h1{
+      font-size: 10.4rem;
+      line-height: 10.4rem;
+    }
+
+    .second-title{
+      font-size: 9rem;
+      line-height: 9rem;
+    }
+  }
+}
 
 /* ==========================================================================
                MOBILE STYLES
@@ -61,6 +82,55 @@
 /* ==========================================================================
                 END MOBILE STYLES
    ========================================================================== */
+
+@media (max-width: 900px){
+
+  .navigation-list {
+    .link-nav+.link-nav{
+      margin-left: 5px;
+    }
+  }
+  
+  .partner-element{
+    width: 50%;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+
+    &:nth-child(3n+3){
+      text-align: center;
+      justify-content: center;
+    }
+
+    &:nth-child(3n+2){
+      text-align: center;
+      justify-content: center;
+    }
+
+    img{
+      max-width: 100%;
+    }
+
+    .partner-element{
+      margin-top: 0;
+    }
+  }
+
+  .list-info-partners{
+    margin-bottom: 50px;
+  }
+
+  .item-info-partners{
+    width: 50%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title-support{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 
 
 @media (max-width: 768px){
@@ -178,22 +248,8 @@
     margin-top: 60px;
   }
 
-  .partner-element{
+  .partner-element {
     width: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-
-    &:nth-child(3n+3){
-      text-align: center;
-    }
-
-    &:nth-child(3n+2){
-      text-align: center;
-    }
-
-    img{
-      max-width: 100%;
-    }
   }
 
   .custom-partner{
@@ -204,6 +260,18 @@
     img + img{
       margin-left: 0;
       margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 630px){
+  .container-support{
+    img {
+      max-width: 100%;
+
+      + img{
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -229,6 +297,12 @@
   .partner--item{
     width: 70%;
     margin: 0 auto 40px;
+  }
+}
+
+@media (max-width: 500px){
+  .item-info-partners {
+    width: 100%;
   }
 }
 
