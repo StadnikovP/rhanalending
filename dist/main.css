@@ -1006,8 +1006,9 @@ body {
 .inner-slide-press {
   width: 430px; }
   .inner-slide-press .logo {
-    margin-bottom: 56px;
-    height: 85px; }
+    margin-bottom: 40px;
+    height: 146px;
+    text-align: center; }
     .inner-slide-press .logo img {
       max-width: 100%;
       max-height: 100%; }
