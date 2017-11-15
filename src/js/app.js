@@ -91,6 +91,7 @@ var moduleApp = {
         this.navigationScroll();
         this.videoBg();
         this.menuButton();
+        this.swiperPress();
     },
     'firstScreenAnimation': function(){
 
@@ -187,6 +188,24 @@ var moduleApp = {
             $('.mobile-nav-bar').toggleClass('active');
             // $('body').toggleClass('open-menu');
         });
+    },
+    'swiperPress': function(){
+        let configPress = {
+            slidesPerView: 'auto',
+            spaceBetween: 80,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints:{
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            }
+        };
+
+        let mySwiper = new Swiper('.js-slider-press', configPress);
     }
 };
 

@@ -306,6 +306,27 @@
   }
 }
 
+@media (max-width: 480px){
+
+  .press{
+    .swiper-slide{
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .inner-slide-press {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    .link-button{
+      left: 20px;
+    }
+  }
+}
+
+
 @media (max-width: 320px){
   .about, .program--content, .news {
     h2{
