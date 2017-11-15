@@ -1039,7 +1039,10 @@ var moduleApp = {
                     slidesPerView: 1,
                     spaceBetween: 0
                 }
-            }
+            },
+            autoplay: {
+                delay: 5000,
+            },
         };
 
         let mySwiper = new Swiper('.js-slider-press', configPress);
