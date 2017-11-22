@@ -1027,7 +1027,7 @@ var moduleApp = {
         });
     },
     'swiperPress': function(){
-        let configPress = {
+        var configPress = {
             slidesPerView: 'auto',
             spaceBetween: 80,
             pagination: {
@@ -1045,7 +1045,7 @@ var moduleApp = {
             },
         };
 
-        let mySwiper = new Swiper('.js-slider-press', configPress);
+        var mySwiper = new Swiper('.js-slider-press', configPress);
     }
 };
 
