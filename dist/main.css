@@ -536,11 +536,12 @@ body {
   .about--text-news p {
     margin-bottom: 14px; }
   .about--text-news .title-text-center {
-    text-align: center;
     margin-bottom: 20px;
     font-size: 20px; }
-  .about--text-news .wrapper-image-text img {
-    max-width: 100%; }
+  .about--text-news .wrapper-image-text {
+    text-align: center; }
+    .about--text-news .wrapper-image-text img {
+      max-width: 100%; }
 
 .pseudo-link {
   position: relative;
