@@ -588,12 +588,31 @@
   + .partner-element{
     margin-top: 100px;
   }
+
+  .text{
+    font-size: 18px;
+    line-height: 21px;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 30px;
+    min-width: 185px;
+  }
+
+  &.custom-text{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
 }
 
 .partner-element{
-  &:nth-child(-n+3){
-    margin-top: 0;
+  @media (min-width: 900px){
+    &:nth-child(-n+3){
+      margin-top: 0;
+    }
   }
+
 
   &:nth-child(3n+3){
     text-align: center;

@@ -107,6 +107,10 @@
       justify-content: center;
     }
 
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+
     img{
       max-width: 100%;
     }
