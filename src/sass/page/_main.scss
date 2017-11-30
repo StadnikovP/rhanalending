@@ -261,12 +261,13 @@
   }
 
   .title-text-center{
-    text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
   }
 
   .wrapper-image-text{
+    text-align: center;
+    
     img{
       max-width: 100%;
     }
@@ -612,7 +613,6 @@
       margin-top: 0;
     }
   }
-
 
   &:nth-child(3n+3){
     text-align: center;
