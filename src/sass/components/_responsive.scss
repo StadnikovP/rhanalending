@@ -130,6 +130,21 @@
     text-align: center;
   }
 
+  .container-support {
+    .wrapper-fix{
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    img {
+      max-width: 100%;
+
+      + img{
+        margin-top: 20px;
+      }
+    }
+  }
+
   .title-support{
     width: 100%;
     margin-bottom: 20px;
@@ -264,18 +279,6 @@
     img + img{
       margin-left: 0;
       margin-top: 20px;
-    }
-  }
-}
-
-@media (max-width: 630px){
-  .container-support{
-    img {
-      max-width: 100%;
-
-      + img{
-        margin-top: 20px;
-      }
     }
   }
 }

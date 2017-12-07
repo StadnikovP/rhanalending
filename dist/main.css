@@ -1668,6 +1668,15 @@ button.swiper-pagination-bullet {
     width: 50%;
     margin-bottom: 20px;
     text-align: center; }
+  .container-support .wrapper-fix {
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .container-support img {
+    max-width: 100%; }
+    .container-support img + img {
+      margin-top: 20px; }
   .title-support {
     width: 100%;
     margin-bottom: 20px; } }
@@ -1757,12 +1766,6 @@ button.swiper-pagination-bullet {
         flex-wrap: wrap; }
     .custom-partner img + img {
       margin-left: 0;
-      margin-top: 20px; } }
-
-@media (max-width: 630px) {
-  .container-support img {
-    max-width: 100%; }
-    .container-support img + img {
       margin-top: 20px; } }
 
 @media (max-width: 550px) {
