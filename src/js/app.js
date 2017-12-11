@@ -212,24 +212,60 @@ var moduleApp = {
         var mySwiper = new Swiper('.js-slider-press', configPress);
     },
     'swiperNews': function(){
-        var configPress = {
+        // var initGlobalNew = false;
+        var configNews = {
             slidesPerView: 1,
+            pagination: {
+                el: '.js-slider-news .swiper-pagination',
+                clickable: true,
+            },
         };
 
-        $('.js-slider-news').each(function(ind,elt){
-            var $elt = $(elt);
+        function initGlobalNewsSlider(){
+            $('.js-slider-news').each(function(ind,elt){
+                var $elt = $(elt);
 
-            console.log($elt);
-            var mySwiper = new Swiper($elt, configPress);
+                var mySwiper = new Swiper($elt, configNews);
 
-            $elt.find('.swiper-button-next').on('click', function(){
-                mySwiper.slideNext();
+                $elt.find('.swiper-button-next').on('click', function(){
+                    mySwiper.slideNext();
+                });
+                $elt.find('.swiper-button-prev').on('click', function(){
+                    mySwiper.slidePrev();
+                });
             });
-            $elt.find('.swiper-button-prev').on('click', function(){
-                mySwiper.slidePrev();
-            });
+        }
 
-        })
+        initGlobalNewsSlider();
+
+        var configGlobalNews = {
+            slidesPerView: 2,
+            spaceBetween: 60,
+            navigation: {
+                nextEl: '.js-news-next',
+                prevEl: '.js-news-prev',
+            },
+            pagination: {
+                el: '.js-slider-global-news .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints:{
+                850: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            },
+            on: {
+                init: function () {
+                    initGlobalNewsSlider()
+                }
+            }
+        };
+
+        var SwiperGlobalNews = new Swiper('.js-slider-global-news', configGlobalNews);
+
+
+
     }
 };
 
