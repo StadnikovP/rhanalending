@@ -929,6 +929,7 @@ var moduleApp = {
         this.videoBg();
         this.menuButton();
         this.swiperPress();
+        this.swiperNews();
     },
     'firstScreenAnimation': function(){
 
@@ -1046,6 +1047,26 @@ var moduleApp = {
         };
 
         var mySwiper = new Swiper('.js-slider-press', configPress);
+    },
+    'swiperNews': function(){
+        var configPress = {
+            slidesPerView: 1,
+        };
+
+        $('.js-slider-news').each(function(ind,elt){
+            var $elt = $(elt);
+
+            console.log($elt);
+            var mySwiper = new Swiper($elt, configPress);
+
+            $elt.find('.swiper-button-next').on('click', function(){
+                mySwiper.slideNext();
+            });
+            $elt.find('.swiper-button-prev').on('click', function(){
+                mySwiper.slidePrev();
+            });
+
+        })
     }
 };
 
