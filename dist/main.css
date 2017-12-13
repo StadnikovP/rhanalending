@@ -1015,6 +1015,7 @@ body {
   color: #111111;
   font-weight: 400; }
 
+/* ========================================================================== */
 .press .title-section {
   color: #0e0e0e;
   font-family: Arial;
@@ -1101,6 +1102,79 @@ body {
       background-color: #f02028;
       color: #ffffff; }
 
+/* ========================================================================== */
+.contacts {
+  padding: 75px 0 30px; }
+  .contacts .title-section {
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 46px;
+    line-height: 4.6rem;
+    letter-spacing: 0px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    margin-bottom: 40px;
+    font-weight: 700; }
+
+.contacts-container .title {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  letter-spacing: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 12px; }
+
+.contacts-container .name {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  letter-spacing: 0px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #111111;
+  margin-bottom: 8px; }
+
+.contacts-container .contacts-elem {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  letter-spacing: 0px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #111111;
+  margin-bottom: 8px;
+  text-decoration: none; }
+  .contacts-container .contacts-elem a {
+    position: relative;
+    display: inline-block;
+    color: #111111;
+    text-decoration: none; }
+    .contacts-container .contacts-elem a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background: #111111;
+      transition: left .3s 0s, width .3s 0s; }
+    .contacts-container .contacts-elem a:hover:before {
+      left: 0;
+      width: 100%; }
+
+/* ========================================================================== */
 /**
  * Swiper 4.0.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions

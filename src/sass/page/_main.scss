@@ -778,7 +778,7 @@
 
 
 
-//==========================================================
+/* ========================================================================== */
 
 .press{
   .title-section{
@@ -891,3 +891,74 @@
     }
   }
 }
+
+
+/* ========================================================================== */
+
+.contacts{
+  padding: 75px 0 30px;
+
+  .title-section{
+    @include fontStyle(36,46,0);
+    @include arial;
+    color: $cBlack;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+}
+
+.contacts-container{
+
+  .title{
+    @include fontStyle(20,30,0);
+    @include robotoconden;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $cDarkBlack;
+    margin-bottom: 12px;
+  }
+
+  .name{
+    @include fontStyle(20,30,0);
+    @include arial;
+    color: $cDarkBlack;
+    margin-bottom: 8px;
+  }
+
+  .contacts-elem{
+    @include fontStyle(18,28,0);
+    @include arial;
+    color: $cDarkBlack;
+    margin-bottom: 8px;
+    text-decoration: none;
+
+    a{
+      position: relative;
+      display: inline-block;
+      color: $cDarkBlack;
+      text-decoration: none;
+
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background: $cDarkBlack;
+        transition: left .3s 0s, width .3s 0s;
+      }
+
+      &:hover{
+        &:before{
+          left: 0;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+
+/* ========================================================================== */
