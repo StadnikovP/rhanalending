@@ -622,7 +622,61 @@
 
 
 /* ========================================================================== */
+.event-container{
+  .title-event{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
 
+    .left-title{
+      display: flex;
+      align-items: center;
+    }
+
+    .right-title{
+      text-align: right;
+    }
+
+    .name{
+      @include fontStyle(48,48,0);
+      @include robotoconden;
+      color: #f02028;
+      margin-left: 30px;
+    }
+
+    .text{
+      @include fontStyle(36,36,0);
+      @include robotoconden;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .language{
+      display: inline-block;
+      color: #f02028;
+      font-family: Arial;
+      @include fontStyle(18,18,0);
+      cursor: pointer;
+    }
+  }
+}
+
+.content-event{
+  .paragraph{
+    margin-bottom: 40px;
+  }
+
+  .title{
+    @include robotoconden;
+    @include fontStyle(20,30,0);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .text{
+    @include robotoconden;
+    @include fontStyle(18,29,0);
+  }
+}
 
 .list-partners{
   display: flex;
