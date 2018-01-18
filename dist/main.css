@@ -860,6 +860,7 @@ body {
 
 /* ========================================================================== */
 .event-container {
+  display: none;
   margin-top: 40px;
   margin-bottom: 100px;
   position: relative; }
