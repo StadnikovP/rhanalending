@@ -861,6 +861,7 @@ body {
 /* ========================================================================== */
 .event-container {
   margin-top: 40px;
+  margin-bottom: 100px;
   position: relative; }
   .event-container .title-event {
     display: -ms-flexbox;
@@ -912,20 +913,24 @@ body {
   .event-container .hidden {
     opacity: 0; }
   .event-container .preload-container {
-    display: none; }
-  .event-container.preload .preload-container {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(204, 204, 204, 0.8);
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    z-index: 50; }
+  .event-container.preload .preload-container {
+    display: -ms-flexbox;
+    display: flex; }
+  .event-container .map-element {
+    width: 100%;
+    height: 410px; }
 
 .r-bounds {
   fill: none;

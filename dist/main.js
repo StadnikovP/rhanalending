@@ -839,6 +839,9 @@ var $window, $document, $html;
 var lang = 'rus',
     init = false;
 
+var myMap,
+    myPlacemark;
+
 var pageApp = {
     'init': function(){
         var $thisApp = $('#app');
@@ -1141,7 +1144,7 @@ var moduleApp = {
 
         function initMap(){
             init = true;
-            
+
         }
 
         function reinit(){
@@ -1151,7 +1154,22 @@ var moduleApp = {
     }
 };
 
+var mapApp = {
+    'init': function(){
+        this.initMap();
+    },
+    'initMap': function(){
+        myMap = new ymaps.Map("map", {
+            center: [55.77445, 37.61034],
+            zoom: 14,
+            controls: ["zoomControl", "typeSelector"]
+        });
 
+        myPlacemark = new ymaps.Placemark([55.77445, 37.61034]);
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+}
 
 $(document).ready(function(){
     // init globals
@@ -1161,5 +1179,10 @@ $(document).ready(function(){
 
     pageApp.init();
     moduleApp.init();
+
+    ymaps.ready(function(){
+        mapApp.init()
+    });
+
 });
 //# sourceMappingURL=main.js.map
