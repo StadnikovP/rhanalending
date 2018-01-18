@@ -20,6 +20,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.min.css" type="text/css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        var recaptchaCallback;
+
+        function recaptchaCallback() {
+//            alert('test');
+            $('.js-submit-registration').removeClass('disabled');
+        };
+    </script>
     <script>
         var appConfig = {
             'mobileVersion':false,
@@ -62,9 +71,10 @@
                 
                 <nav class="navigation-list">
                     <a href="#about" class="link-nav js-link-nav">О проекте</a>
-                    <a href="#program" class="link-nav js-link-nav"> Программа</a>
-                    <a href="#partners" class="link-nav js-link-nav"> Партнеры</a>
-                    <a href="#news" class="link-nav js-link-nav"> Новости</a>
+                    <a href="#program" class="link-nav js-link-nav">Программа</a>
+                    <a href="#partners" class="link-nav js-link-nav">Партнеры</a>
+                    <a href="#news" class="link-nav js-link-nav">Новости</a>
+                    <!--<a href="#registration" class="link-nav js-link-nav">Регистрация</a>-->
                 </nav>
 
                 <div class="mobile-btn-menu js-m-btn-menu"><span>выпадающее меню</span></div>
@@ -270,25 +280,7 @@
                 <div class="event-container" id="event-moscow">
                     <div class="preload-container">
                         <div class="preload">
-                            <svg viewBox="0 0 120 120" class="svg-preloader">
-                                <symbol id="s-circle">
-                                    <circle r="10" cx="10" cy="10"></circle>
-                                </symbol>
-                                <g id="circle" class="g-circles">
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                    <use xlink:href="#s-circle" class="u-circle"/>
-                                </g>
-                            </svg>
+                            <svg viewBox="0 0 120 120" class="svg-preloader"><symbol id="s-circle"><circle r="10" cx="10" cy="10"></circle></symbol><g id="circle" class="g-circles"><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/><use xlink:href="#s-circle" class="u-circle"/></g></svg>
                         </div>
                     </div>
                     <div class="event-content-wrapper js-event-moscow" data-lang="rus">
@@ -396,10 +388,30 @@
 
                 <div class="title-section" style="">Официальные документы </div>
                 <div class="list-documents">
-                    <div class="document-item">
-                        <div class="icon"></div>
-                        <div class="name"></div>
-                    </div>
+                    <a class="document-item" href="/files/меморандум_линия_жизни.pdf" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Меморандум линия жизни.pdf<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
+                    <a class="document-item" href="/files/Письмо_Министерства_Культуры.pdf" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Письмо Министерства Культуры.pdf<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
+                    <a class="document-item" href="/files/меморандум_линия_жизни_(2).pdf" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Меморандум линия жизни 2.pdf<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
+                    <a class="document-item" href="/files/Письмо_Правительства_Москвы.pdf" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Письмо Правительства Москвы.pdf<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
+                    <a class="document-item" href="/files/Посольство_Японии._Уведомление_о_включении.pdf" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Посольство Японии. Уведомление о включении.pdf<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
+                    <a class="document-item" href="/files/Торгово-промышленная_палата.docx" download="" >
+                        <div class="icon"><img src="/dist/img/file.png" alt=""></div>
+                        <div class="name">Торгово-промышленная палата.docx<span><svg class="icon-download" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="14px" viewBox="0 0 433.5 433.5"><path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"/></svg></span></div>
+                    </a>
                 </div>
             </div>
 
@@ -782,14 +794,87 @@
             </div>
         </section>
 
+        <section class="registration" id="registration">
+            <div class="wrapper-fix news-wrapper">
+                <div class="title-section">Регистрация / Registration</div>
+
+                <div class="form-registration-container">
+                    <form action="" class="form-registration">
+                        <div class="row">
+                            <div class="column">
+                                <div class="form-radio form-element-wrapper">
+                                    <input type="radio" id="radio-1" name="text-radio" >
+                                    <label for="radio-1"><b>Организация</b> / Organization</label>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="form-radio form-element-wrapper">
+                                    <input type="radio" id="radio-2" name="text-radio" checked="">
+                                    <label for="radio-2"><b>Физическое лицо</b> / Individual</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-input form-element-wrapper">
+                            <label>
+                                <span class="form-item-label"><b>Ваше ФИО</b> / Your name</span>
+                                <input type="text" name="name" data-validation="text">
+                            </label>
+                            <div class="form-item-error">Исправьте ошибку в поле ввода</div>
+                        </div>
+                        <div class="form-input form-element-wrapper">
+                            <label>
+                                <span class="form-item-label"><b>Контактный телефон</b> / Contact number</span>
+                                <input type="text" name="phone" data-validation="text">
+                            </label>
+                            <div class="form-item-error">Исправьте ошибку в поле ввода</div>
+                        </div>
+                        <div class="form-input form-element-wrapper">
+                            <label>
+                                <span class="form-item-label"><b>E-mail</b></span>
+                                <input type="text" name="email" data-validation="text">
+                            </label>
+                            <div class="form-item-error">Исправьте ошибку в поле ввода</div>
+                        </div>
+
+                        <div class="form-textarea form-element-wrapper">
+                            <label>
+                                <span class="form-item-label"><b>Комментарий</b> / Notes</span>
+                                <textarea name="comments" data-validation="textarea"></textarea>
+                            </label>
+                            <div class="form-item-error">Исправьте ошибку в поле ввода</div>
+                        </div>
+                        <div class="center-container">
+                            <!--$key = 6LfqcEEUAAAAAOufNHm6swUaHD6AS9ZmEsf13AKU -->
+                            <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LfqcEEUAAAAAPGZ08Ax6c_GJk7TI_HJN1pCjhPy"></div>
+                            <button class="btn-default registration-btn js-submit-registration disabled">Регистрация</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
         <section class="contacts" id="contacts">
             <div class="wrapper-fix news-wrapper">
                 <div class="title-section">Контакты</div>
-                <div class="contacts-container">
-                    <div class="title">Взаимодействие с партнерами и спонсорами</div>
-                    <div class="name">Елена Колотило</div>
-                    <div class="contacts-elem">тел.: <a href="tel:84956099801">+7 495 609 98 01</a>&nbsp<a href="tel:84956099803">+7 495 609 98 03</a></div>
-                    <div class="contacts-elem">e-mail: <a href="mailto:pr1@rhana.ru">pr1@rhana.ru</a></div>
+                <div class="contacts-wrapper">
+                    <div class="contacts-container">
+                        <div class="title">Взаимодействие с партнерами и спонсорами</div>
+                        <div class="name">Елена Колотило</div>
+                        <div class="contacts-elem">тел.: <a href="tel:84956099801">+7 495 609 98 01</a>&nbsp<a href="tel:84956099803">+7 495 609 98 03</a></div>
+                        <div class="contacts-elem">e-mail: <a href="mailto:pr1@rhana.ru">pr1@rhana.ru</a></div>
+                    </div>
+
+                    <div class="contacts-container">
+                        <div class="title">Контакты для СМИ</div>
+                        <div class="name">Елена Колотило</div>
+                        <!--<div class="contacts-elem">тел.: <a href="tel:84956099801">+7 495 609 98 01</a>&nbsp<a href="tel:84956099803">+7 495 609 98 03</a></div>-->
+                        <div class="contacts-elem">e-mail: <a href="mailto:org@kulturazhit.ru">org@kulturazhit.ru</a></div>
+                    </div>
                 </div>
             </div>
         </section>

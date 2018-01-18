@@ -849,7 +849,6 @@ $angle: 360/$max;
 }
 
 
-
 .partners{
   position: relative;
   padding: 39px 0 18px 0;
@@ -934,7 +933,55 @@ $angle: 360/$max;
 }
 
 
+.list-documents{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
 
+.document-item{
+  width: 50%;
+  text-decoration: none;
+  color: #111111;
+  transition: color .3s 0s;
+  margin-bottom: 24px;
+
+
+  &:hover{
+    color: #e9001f;
+
+    .icon-download{
+      path{
+        fill:#e9001f;
+      }
+    }
+  }
+
+  .icon-download{
+    path{
+      fill:#111111;
+      transition: fill .3s 0s;
+    }
+  }
+
+  .icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+
+  .name{
+    display: inline-block;
+    @include fontStyle(20,22,0);
+    @include arial;
+    vertical-align: middle;
+
+    span{
+      padding-left: 8px;
+    }
+
+  }
+}
 
 /* ========================================================================== */
 
@@ -1051,10 +1098,13 @@ $angle: 360/$max;
 }
 
 
-/* ========================================================================== */
+/*==============================================================================*/
+$cRed: #f02028;
+$cBrown: #111;
 
-.contacts{
-  padding: 75px 0 30px;
+.registration{
+  display: none;
+  padding: 75px 0 56px;
 
   .title-section{
     @include fontStyle(36,46,0);
@@ -1062,6 +1112,314 @@ $angle: 360/$max;
     color: $cBlack;
     margin-bottom: 40px;
     font-weight: 700;
+  }
+}
+
+
+.form-registration-container{
+  display: flex;
+  justify-content: center;
+}
+
+.form-registration{
+  max-width: 526px;
+
+  .center-container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+}
+
+.form-input{
+  position: relative;
+  margin-bottom: 24px;
+  text-align: left;
+
+  label{
+    position: relative;
+    display: block;
+  }
+
+  input{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    outline: 0;
+    padding: 11px 15px 11px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    @include fontStyle(16,24,0);
+    @include robotoconden;
+    color: $cBrown;
+    transition: border .3s 0s;
+
+    &:focus{
+      border: 1px solid #736d6e;
+    }
+
+    &:hover{
+      border: 1px solid #736d6e;
+    }
+
+  }
+
+  .form-item-label{
+    position: relative;
+    display: inline-block;
+    @include fontStyle(16,24,0);
+    @include robotoconden;
+    color: rgba(17, 17, 17, 0.6);
+    margin-bottom: 8px;
+
+    b{
+      color: $cBrown;
+      font-weight: 400;
+    }
+  }
+
+  .form-item-error{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: $cRed;
+    @include fontStyle(12,16,0);
+    @include robotoconden;
+    overflow: hidden;
+    height: 16px;
+    transition: opacity .3s 0s, visibility .3s 0s;
+  }
+
+  &.show-error{
+    input{
+      border: 1px solid $cRed;
+    }
+
+    .form-item-error{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.form-textarea{
+  position: relative;
+  margin-bottom: 24px;
+  text-align: left;
+
+  label{
+    position: relative;
+    display: block;
+  }
+
+  textarea{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    outline: 0;
+    padding: 11px 15px 11px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background: 0 0;
+    @include fontStyle(16,24,0);
+    //@include FenomenSans-Book;
+    color: $cBrown;
+    transition: border .3s 0s;
+    resize: none;
+    height: 140px;
+    overflow: auto;
+
+    &:focus{
+      border: 1px solid #736d6e;
+    }
+
+    &:hover{
+      border: 1px solid #736d6e;
+    }
+  }
+
+  .form-item-label{
+    position: relative;
+    display: inline-block;
+    @include fontStyle(16,24,1);
+    @include robotoconden;
+    color: rgba(17, 17, 17, 0.6);
+    margin-bottom: 8px;
+
+    b{
+      color: $cBrown;
+      font-weight: 400;
+    }
+  }
+
+  .form-item-error{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: $cRed;
+    @include fontStyle(12,16,0);
+    //@include FenomenSans-Book;
+    overflow: hidden;
+    height: 16px;
+    transition: opacity .3s 0s, visibility .3s 0s;
+  }
+
+  &.show-error{
+    textarea{
+      border: 1px solid $cRed;
+    }
+
+
+    .form-item-error{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  //&.filled{
+  //    .form-item-label{
+  //        top:10px;
+  //        @include fontStyle(12,12,0);
+  //    }
+  //}
+}
+
+.form-radio{
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 5px 24px;
+  box-sizing: border-box;
+
+  input{
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    left: -9999px;
+
+    &:checked{
+      +label{
+        &:after{
+          opacity: 1;
+        }
+
+        &:before{
+          border: 1px solid $cRed;
+        }
+      }
+    }
+  }
+
+  label{
+    display: inline-block;
+    @include fontStyle(16,24,0);
+    @include robotoconden;
+    cursor: pointer;
+    color: rgba(17, 17, 17, 0.6);
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $cBrown;
+      border-radius: 50%;
+      box-sizing: border-box;
+      transition: all .3s;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      background: $cRed;
+      border-radius: 50%;
+      box-sizing: border-box;
+      transition: all .3s;
+      opacity: 0;
+    }
+
+    b{
+      color: $cBrown;
+      font-weight: 400;
+    }
+
+    &:hover{
+      &:before{
+        border: 1px solid $cBrown;
+      }
+    }
+  }
+}
+
+.btn-default{
+  display: inline-block;
+  color: #ffffff;
+  @include fontStyle(16,18,0);
+  @include robotoconden;
+  letter-spacing: 0.2px;
+  padding: 18px 35px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.registration-btn{
+  background-color: #f02028;
+  border: 2px solid #f02028;
+  margin-top: 24px;
+  transition: color .3s 0s, background-color .3s 0s;
+
+  &:hover{
+    background-color: #fff;
+    color: #f02028;
+  }
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+
+  .column{
+    width: 50%;
+  }
+}
+/* ========================================================================== */
+
+.contacts{
+  padding: 75px 0 30px;
+  background-color: #fafafa;
+
+  .title-section{
+    @include fontStyle(36,46,0);
+    @include arial;
+    color: $cBlack;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+}
+
+.contacts-wrapper{
+  .contacts-container{
+    display: inline-block;
+    margin-right: 156px;
+    vertical-align: top;
   }
 }
 

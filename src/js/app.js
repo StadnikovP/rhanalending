@@ -99,7 +99,6 @@ var moduleApp = {
         this.swiperPress();
         this.swiperNews();
         this.changeLanguage();
-        this.mapEventMoscow(lang);
     },
     'firstScreenAnimation': function(){
 
@@ -296,24 +295,6 @@ var moduleApp = {
             },300);
 
         });
-    },
-    'mapEventMoscow': function(lang){
-        if(init){
-            reinit();
-        }
-        else{
-            initMap(lang)
-        }
-
-        function initMap(){
-            init = true;
-
-        }
-
-        function reinit(){
-        }
-
-
     }
 };
 
