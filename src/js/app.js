@@ -1,4 +1,6 @@
 var $window, $document, $html;
+var lang = 'rus',
+    init = false;
 
 var pageApp = {
     'init': function(){
@@ -93,6 +95,8 @@ var moduleApp = {
         this.menuButton();
         this.swiperPress();
         this.swiperNews();
+        this.changeLanguage();
+        this.mapEventMoscow(lang);
     },
     'firstScreenAnimation': function(){
 
@@ -264,6 +268,47 @@ var moduleApp = {
 
         var SwiperGlobalNews = new Swiper('.js-slider-global-news', configGlobalNews);
 
+
+
+    },
+    'changeLanguage': function(){
+        $('.js-language').on('click', function(){
+
+            var $this = $(this),
+                $parent = $('.js-event-moscow'),
+                version = $this.attr('data-change'),
+                $eventContainer = $('.event-container');
+
+            $parent.attr('data-lang',version);
+            $eventContainer.addClass('preload');
+            setTimeout(function(){
+                $('.event-version').addClass('disabled');
+                $('[data-version =' + version +']').addClass('hidden').removeClass('disabled');
+                setTimeout(function () {
+                    $('[data-version =' + version +']').removeClass('hidden');
+                },200);
+                setTimeout(function () {
+                    $eventContainer.removeClass('preload');
+                },300);
+            },300);
+
+        });
+    },
+    'mapEventMoscow': function(lang){
+        if(init){
+            reinit();
+        }
+        else{
+            initMap(lang)
+        }
+
+        function initMap(){
+            init = true;
+            
+        }
+
+        function reinit(){
+        }
 
 
     }
