@@ -329,6 +329,33 @@
   letter-spacing: 0.4px;
 }
 
+.quote-ambassador-container{
+  display: flex;
+  @include robotoconden;
+  margin-bottom: 120px;
+
+  .image-quote-ambassador{
+    max-width: 180px;
+  }
+
+  .text-quote-ambassador{
+    padding-left: 10%;
+    @include fontStyle(25,35,0);
+    >p{
+      margin-bottom: 28px;
+    }
+  }
+
+  .signature-quote-ambassador{
+    text-align: right;
+    p{
+      display: inline-block;
+      max-width: 390px;
+      @include fontStyle(16,21,0);
+    }
+  }
+}
+
 /* ========================================================================== */
 
 .program{
